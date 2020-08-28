@@ -5,7 +5,7 @@ try {
 	Initializer::init();
 	$configs = Loader::load('Configs');
 	$router = Loader::load('Router');
-	Dispacher::dispach($configs, $router);
+	Dispacher::dispach($router);
 }
 catch ( Exception $e ) {
 	echo '<div style="color:red;border:10px solid red;margin:10vh auto;padding:20px;width:40%;">';

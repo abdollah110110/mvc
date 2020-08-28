@@ -1,1 +1,6 @@
-<h1>OK From site\index view</h1>
+<?php if ( isset( $categories ) ): ?>
+	<?php foreach ( $categories as $category ): ?>
+		<p><?= Tools::encode( $category->name ) ?></p>
+	<?php endforeach; ?>
+<?php endif; ?>
+

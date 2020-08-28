@@ -1,9 +1,9 @@
 <?php
 $configs = [
-	'dbhost' => 'localhost',
+	'dbHost' => 'localhost',
 	'dbName' => 'mvc',
-	'dbuser' => 'root',
-	'dbpassword' => '',
+	'dbUser' => 'root',
+	'dbPassword' => '',
 	'defaultController' => 'site',
 	'homeUrl' => 'http://localhost/mvc/',
 	'invalidUrlChars' => '#[^a-z0-9\-_\/]#i',

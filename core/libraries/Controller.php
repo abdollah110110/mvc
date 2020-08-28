@@ -6,6 +6,10 @@ class Controller {
 
 	public $layout = 'main';
 
+	public function config( $name ) {
+		return Loader::load('Configs')->$name;
+	}
+
 	protected function getParam( $paramName, $params ) {
 		return (isset( $params[ $paramName ] ) ? $params[ $paramName ] : null);
 	}
@@ -19,7 +23,7 @@ class Controller {
 		}
 		ob_start();
 		require $viewFile;
-		$content = ob_get_clean().PHP_EOL;
+		$content = ob_get_clean() . PHP_EOL;
 		if ( $useLayout ) {
 			$layoutFile = Tools::basePath() . "app/views/layouts/{$this->layout}.php";
 			if ( ! file_exists( $layoutFile ) ) {
@@ -37,7 +41,7 @@ class Controller {
 	}
 
 	public function renderPartial( $view, $values = [] ) {
-		$this->loadView( $view, $values,false );
+		$this->loadView( $view, $values, false );
 	}
 
 	public function renderText( $text ) {

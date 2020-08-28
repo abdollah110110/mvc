@@ -10,9 +10,9 @@ class Dispacher {
 	 * @param type $router Returns the name of the controller and the action and parameters
 	 * @throws Exception Contains an error message
 	 */
-	public static function dispach( $configs, $router ) {
+	public static function dispach( $router ) {
 		global $app;
-//		$configs = Loader::load( 'Configs' );
+		$configs = Loader::load( 'Configs' );
 		$controller = ucfirst( $router->getController() ); // Site
 		$controllerClass = "{$controller}Controller"; // SiteController
 		$actionName = $router->getAction();
